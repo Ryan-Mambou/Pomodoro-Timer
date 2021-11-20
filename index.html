@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="settings.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" type="text/css" href="secondbody.css">
+	<meta charset="utf-8">
+	<title id="title">Pomodoro</title>
+	<link id="faviconLink" rel="shortcut icon" href="faviconp.ico" type="image/x-icon" >
+</head>
+<body>
+<div class="setting-menu">
+	<div class="setting-top">
+		<p>TIMER SETTINGS</p>
+		<i id="close-icon" class="fas fa-times"></i>
+	</div>
+
+	<hr class="hr-setting" />
+
+	<div class="time-minutes"><p>Time (minutes)</p></div>
+
+	<div class="set-minutes">
+		<div class="pomodoro">
+		<label for="pomodoro">Pomodoro</label><br>
+			<input value="3" step="1" type="number" id="pomodoro" name="number" style="width: 75%;">
+			</div>
+			<div class="s-break">
+		<label for="s-break">Short Break</label><br>
+			<input step="1" type="number" value="2" id="s-break" name="s-break" style="width: 75%;">
+			</div>
+			<div class="l-break">
+		<label for="l-break">Long Break</label><br>
+			<input step="1" value="1" type="number" id="l-break" name="l-break" style="width: 75%;">
+			</div>
+
+	</div>
+	<hr class="hr-setting"/>
+	<div class="one">
+		<p>Auto start Breaks?</p>
+		<label class="switch">
+			<input type="checkbox" id="checkbox1">
+			<span class="slider round"></span>
+		</label>
+	</div>
+
+	<hr class="hr-setting"/>
+
+	<div class="two">
+		<p>Auto start Pomodoro?</p>
+		<label class="switch">
+			<input type="checkbox" id="checkbox2">
+			<span class="slider round"></span>
+		</label>
+	</div> 
+
+	<hr class="hr-setting"/>
+
+	<div class="three">
+		<p>Long Break interval</p>
+		<input type="number" value="4" name="interval" step="2" id="longbreak-count" style="width: 27%;">
+	</div>
+
+	<hr class="hr-setting"/>
+
+	<div class="four">
+	<p>Alarm Sound</p>
+	<div class="four-subdiv">
+		<select style="width: 60%; margin: 7px;">
+			<option></option>
+		</select>
+		<div class="slidecontainer" style="margin: 7px;">
+			<p><span  id="volume1"></span></p>
+			<input type="range" value="50" min="1" max="100" id="myRange1" class="rangeSliders">
+		</div>
+		<div class="repeat" style="margin: 7px; width: 70%;">
+			<p>repeat</p>
+			<input type="number" value="1" step="1" style="width: 70%;">
+		</div>
+	</div>
+</div>
+
+	<hr class="hr-setting"/>
+
+	<div class="five">
+		<p>Ticking Sound</p>
+		<div class="slidecontainer2">
+			<select style="width: 60%;">
+			<option></option>
+		</select>
+		<div>
+		<p><span  id="volume2"></span></p>
+  <input type="range" min="1" max="100" value="50" id="myRange2" class="rangeSliders">
+  </div>
+</div>
+	</div>
+
+	<hr class="hr-setting"/>
+
+	<div class="dark-mode">
+		<p>Dark Mode when running</p>
+
+
+		<label class="switch">
+			<input type="checkbox">
+			<span class="slider round"></span>
+		</label>
+	</div>
+
+	<hr class="hr-setting"/>
+
+	<div class="notification">
+		<p>Notification </p>
+		<div class="notification-div">
+			<select style="width: 60%;">
+				<option></option>
+			</select>
+			<input type="number" value="5" step="5" style="width: 35%">
+		</div>
+	</div>
+
+	<div class="ok">
+		<button class="ok-button">OK</button>
+	</div>
+</div>
+
+<div class="top-wrapper">
+<div class="top">
+	<div class="icon"><i class="fas fa-check-circle"></i> Pomofocus</div>
+<div class="parameters">
+	<div class="report"><i class="fas fa-chart-pie"></i> <span>Report</span></div>
+	<div class="setting"><i id="setting-icon" class="fas fa-cog"></i> <span>Settings</span></div>
+
+	<div class="dropdown">
+	<div class="login" onclick="drop()"><i class="fas fa-user-circle"></i> <span>User</span></div>
+	<div id="myDropdown" class="dropdown-content">
+	<a href=""><i class="fab fa-google"></i>  Login with Google</a>
+	<a href=""><i class="fas fa-envelope"></i>  Login with Email</a>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="first-body">
+
+
+
+
+<div id="progress-container">
+	<div id="progress-bar"></div>
+</div>
+
+<div class="time-section">
+	<div class="choice">
+<p class="pdro">Pomodoro</p>
+<p class="s-b">Short Break</p>
+<p class="l-b">Long Break</p>
+</div>
+<div id="clock">
+	<script type="text/javascript">
+		document.getElementById("clock").textContent = document.getElementById('pomodoro').value + ":" + "00";
+	</script>
+</div>
+<div class="button">
+<button type="button" class="start-stop" onclick="playclick('ES_Switch Click 6 - SFX Producer.mp3')">START</button>
+</div>
+</div>
+
+<p>Time to work!</p>
+<div class="task">
+	<p>Tasks</p>
+	<i class="fas fa-ellipsis-v"></i>
+</div>
+
+<hr class="hr-task" />
+
+<div class="add-task">
+	<i class="fas fa-plus-circle"></i>
+	<p> Add Task</p>
+</div>
+</div>
+<div class="second-body">
+	<div><h1>An online Pomodoro Timer to boost your productivity</h1></div>
+
+	<div><h2>What is Pomofocus?</h2>
+		<hr class="hr-secondbody">
+		<p>Pomofocus is a customizable pomodoro timer that works on desktop & mobile browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding. This app is inspired by Pomodoro Technique which is a time management method developed by Francesco Cirillo.</p>
+	</div>
+
+	<div><h2>What is Pomodoro Technique?</h2>
+		<hr class="hr-secondbody">
+		<p>The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student. - Wikipedia</p>
+	</div>
+
+	<div><h2>How to use the Pomodoro Timer?</h2>
+		<hr class="hr-secondbody">
+		<ol>
+			<li>Add tasks to work on today</li>
+			<li>Set estimate pomodoros (1 = 25min of work) for each tasks</li>
+            <li>Select a task to work on</li>
+            <li>Start timer and focus on the task for 25 minutes</li>
+            <li>Take a break for 5 minutes when the alarm ring</li>
+            <li>Iterate 3-5 until you finish the tasks</li>
+		</ol>
+	</div>
+
+	<div><h2>Features</h2>
+		<hr class="hr-secondbody">
+		<ul>
+		<li> Responsive design that works with desktop and mobile</li>
+		<li> Color transition to switch moods between work time and rest time</li>
+		<li> Audio notification at the end of a timer period</li>
+		<li> Customizable timer intervals to suit your preference</li>
+		</ul>
+	</div>
+
+	<div><h2>Download App</h2>
+		<hr class="hr-secondbody">
+		<ul>
+			<li> For macOS (zip file)</li>
+			<li> For Windows (exe file)</li>
+		</ul>
+	</div>
+	<footer>
+		<ul>
+			<li>Home</li>
+			<li>Privacy</li>
+			<li>Contact</li>
+			<li>Simple Page</li>
+		</ul>
+		<div class="bottomicons">
+			<i class="fab fa-facebook-square"></i>
+			<i class="fab fa-twitter-square"></i>
+			<i class="fab fa-linkedin"></i>
+		</div>
+	</footer>
+</div>
+<script type="text/javascript" src="pomodoro.js"></script>
+</body>
+</html>

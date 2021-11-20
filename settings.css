@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'ArialRounded';
+  font-display: swap;
+  src: url('/https://www.maisfontes.com/arial-rounded-mt')
+    format('truetype');
+}
+
+.setting-menu {
+	font-family: 'Arial Rounded MT';
+	color: 	rgb(105,105,105);
+	border-radius: 10px;
+    background-color: white;
+	position: absolute;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+    width: 24%;
+    min-width: 325px;
+    min-height: 700px;
+    overflow: auto;
+    left: 50%;
+  /**  margin-left: -250px; **/
+    top: 50%;   
+   /**  margin-top: -200px; **/
+   transform: translate(-50%,-35%);
+    overflow: auto;
+    z-index: -1;
+}
+
+input[type=number]{
+	height: 42px;
+	background-color: rgba(105,105,105,0.2);
+	border: none;
+	border-radius: 5%;
+	font-size: 15px;
+	font-family: 'Arial Rounded MT';
+	padding-left: 10px;
+}
+
+select{
+	height: 34px;
+	background-color: rgba(105,105,105,0.2);
+	border: none;
+	border-radius: 5%;
+	font-size: 15px;
+	font-family: 'Arial Rounded MT';
+}
+
+.hr-setting {
+	width: 90%;
+	min-width: 300px;
+	height: 2px;
+	border: none;
+	background-color: rgba(220,220,220,1);
+}
+
+.setting-top {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+}
+
+.setting-top {
+	cursor: pointer;
+}
+
+.time-minutes {
+	display: flex;
+	justify-content: flex-start;
+	width: 90%;
+
+}
+
+.set-minutes {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.pomodoro, .s-break, .l-break{
+    width: 90%;
+	display: inline-block;
+}
+
+.one {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+}
+
+.two {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+}
+
+.three {
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+}
+
+.four {
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+}
+
+.four-subdiv {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.slidecontainer {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.slidecontainer2 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.slidecontainer2 div {
+	display: flex;
+	margin: 7px;
+}
+
+.slidecontainer span {
+	margin-right: 2px;
+}
+
+input[type='range']{
+
+}
+
+.rangeSliders {
+	display: inline;
+	-webkit-appearance: none;
+	background-color: rgba(105,105,105,0.4);
+	border-radius: 10px;
+	height: 6px;
+	align-self: center;
+
+}
+
+.rangeSliders::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: white;
+	cursor: pointer;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+.five {
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+}
+
+.slidecontainer {
+	display: flex;
+}
+
+.repeat {
+	display: flex;
+	float: right;
+}
+
+.repeat p {
+	align-self: center;
+	margin-right: 3px;
+}
+
+.dark-mode {
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+}
+
+.notification {
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+}
+
+.notification-div {
+	display: flex;
+	justify-content: space-between;
+	width: 40%;
+}
+
+.notification select{
+	height: 42px;
+}
+
+.ok {
+	display: flex;
+	width: 90%;
+	align-items: center;
+	background-color: rgba(105,105,105,0.2);
+	height: 80px;
+	width: 100%;
+}
+
+.ok-button {
+	position: absolute;
+	right: 25px;
+	border: none;
+	font-family: 'Arial Rounded MT';;
+	border-radius: 7px;
+	color: white;
+	background-color: rgba(0,0,0,0.8);
+	cursor: pointer;
+	padding: 7px;
+	width: 75px;
+	height: 40px;
+}
+
+
+/*START OF TOGGLE SWITCH
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #8fd400;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #8fd400;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-width: 600px){
+	.setting-menu {
+		width: 80%;
+		margin: auto;
+	}
+}

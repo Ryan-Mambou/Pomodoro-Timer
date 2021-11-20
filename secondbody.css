@@ -1,0 +1,110 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+@font-face {
+  font-family: 'ArialRounded';
+  font-display: swap;
+  src: url('/https://www.maisfontes.com/arial-rounded-mt')
+    format('truetype');
+}
+
+.second-body {
+	font-family:  'Arial Rounded MT';
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	background-color: white;
+	text-align: justify;
+	overflow-y: auto;
+	min-height: 100vh;
+}
+
+.second-body div {
+	width: 45%;
+	line-height: 32px;
+	margin-top: 55px;
+}
+
+.second-body ul {
+	list-style: inside;
+}
+
+.second-body ol {
+	list-style: inside;
+}
+
+.hr-secondbody {
+	width: 22px;
+	height: 3px;
+	background-color: rgb(227, 66, 52);
+	border: none;
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+
+
+
+footer {
+	border-top: 2px solid rgba(220,220,220,1);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+}
+
+footer ul {
+	margin-top: 20px;
+	cursor: pointer;
+	display: flex;
+	width: 30%;
+	align-items: center;
+	margin: auto;
+	 justify-content: center;
+	list-style: none !important; 
+	white-space: nowrap;
+}
+
+footer li {
+	margin: 10px;
+}
+
+.bottomicons {
+	cursor: pointer;
+	margin-top: 50px;
+	display: flex;
+	width: 20%;
+	margin: auto;
+	justify-content: center;
+	/**transform: translateX(-20%);**/
+	/** justify-content: space-around; **/
+	font-size: 45px;
+	margin-bottom: 20px;
+}
+
+.bottomicons i {
+	margin: 3px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+	.second-body div {
+		width: 85%;
+	}
+}
+
+@media (max-width: 767px){
+	.second-body div{
+		width: 95%;
+	}
+
+	footer ul {
+		flex-wrap: wrap;
+	}
+}

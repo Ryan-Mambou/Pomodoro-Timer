@@ -1,0 +1,292 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+@font-face {
+  font-family: 'ArialRounded';
+  font-display: swap;
+  src: url('/https://www.maisfontes.com/arial-rounded-mt')
+    format('truetype');
+}
+
+body {
+	background-color: rgb(227, 66, 52);
+}
+
+
+
+.first-body {
+	font-family: 'Arial Rounded MT';
+	background-color: rgb(227, 66, 52);
+	display: flex;
+	flex-direction: column;
+	/** justify-content: space-between; **/
+	padding: 10px;
+	align-items: center;
+    background-color: rgb(227, 66, 52);
+    min-height: 85vh;
+    color: white;
+    position: relative;
+    transition: background-color 1s ease;
+    overflow-y: auto;
+}
+
+.top-wrapper {
+	width: 100%;
+	background-color: rgb(227, 66, 52);
+	transition: background-color 1s ease;
+}
+
+.top {
+	width: 60%;
+	/**min-width: 600px;**/
+	display: flex;
+	justify-content: space-between; 
+	font-family: 'Arial Rounded MT';
+	background-color: rgb(227, 66, 52);
+	transition: background-color 1s ease;
+	margin: auto;
+	color: white;
+	position: relative;
+	align-items: center;
+	padding: 25px;
+	height: 15px;
+}
+
+.report, .setting, .login{
+	background-color: rgba(255,255,255,0.2);
+	padding: 8px;
+	border-radius: 10%;
+	flex-wrap: nowrap;
+	cursor: pointer;
+	white-space: nowrap;
+
+}
+
+.report:active, .setting:active, .login:active {
+	transform: translateY(4px);
+}
+
+.login {
+	display: inline-block;
+	position: relative;
+}
+
+.dropdown-content {
+	position: absolute;
+	display: none;
+	z-index: 1;
+	background-color: white;
+}
+
+.dropdown-content a {
+	display: none;
+	padding: 16px 16px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+	background-color: #dde4e3;
+}
+
+.show {
+	display: block;
+}
+
+.icon {
+	padding: 8px;
+}
+
+.parameters {
+	display: flex;
+	width: 35%;
+	/**min-width: 182px;**/
+	/** justify-content: space-around; **/
+	cursor: pointer;
+	align-items: center;
+	height: auto;
+	padding: 3px;
+	font-size: 13px;
+}
+
+
+.login, .setting, .report{
+	margin-left: 10px;
+}
+
+#progress-container{
+	background-color: rgba(0,0,0,0.3);
+	height: 1px;
+	width: 50%;
+	margin-top: 5px;
+}
+
+#progress-bar{
+	background-color: white;
+	height: 3px;
+	width: 0%;
+}
+
+.time-section {
+	background-color: rgba(255,255,255,0.2);
+	width: 30%;
+	min-width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: auto;
+	min-height: 250px;
+	border-radius: 5px;
+	margin: 40px;
+}
+
+
+.choice{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    padding: 15px;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+}
+
+.choice p {
+	 padding: 5px;
+	 border-radius: 10%;
+	 cursor: pointer;
+}
+
+.pdro {
+	background-color: rgba(0,0,0,0.2);
+}
+
+
+#clock {
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	flex: 4;
+	font-size: 8em;
+	overflow-wrap: break-word;
+}
+
+#clock p {
+	vertical-align: middle;
+}
+
+.button {
+	flex: 1;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.start-stop {
+	width: 75%;
+	padding: 15px;
+	border-radius: 3px;
+	bottom: 10px;
+	background-color: white;
+	margin-bottom: 15px;
+	border: none;
+    box-shadow: 0px 7px 0px 0px rgba(220,220,220,1);
+    font-size: 30px;
+    color: rgb(227, 66, 52);
+    transition: color 1s ease-in;
+    cursor: pointer;
+}
+
+.start-stop:active {
+	transform: translateY(4px);
+	box-shadow: none;
+}
+
+.task {
+	display: flex;
+	justify-content: space-between;
+	width: 35%;
+	min-width: 470px;
+	margin: 25px;
+}
+
+.task i {
+	cursor: pointer;
+}
+
+.hr-task {
+    border: none;
+	height: 3px;
+	background-color: white;
+	min-width: 470px;
+}
+
+.add-task {
+	min-width: 470px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	border: 2px rgba(255,255,255,0.4) dashed;
+	padding: 15px;
+	margin: 40px;
+	
+}
+
+.add-task p {
+    margin-left: 5px;
+}
+
+
+/**END OF TOGGLE SWITCH**/
+
+@media (min-width: 768px) and (max-width: 1023px){
+	.top {
+		width: 80%;
+		font-size: 27px;
+	}
+
+	.report, .setting, .login{
+		font-size: 12px;
+	}
+
+	#progress-container {
+		width: 65%;
+	}
+
+} 
+
+@media (max-width: 767px){
+	.top {
+		width: 100%;
+	}
+
+	#progress-container{
+		width: 90%;
+	}
+
+	.parameters span {
+		display: none;
+	}
+
+	.time-section {
+		width: 50%;
+	}
+
+	.parameters {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+
+}
+
