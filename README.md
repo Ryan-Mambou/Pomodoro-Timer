@@ -1,8 +1,8 @@
 # Pomodoro-Timer
 
-##Description
+## Description
 
-Pomodoro timer app developed with Html, CSS and vanilla JS.
+**Pomodoro timer app developed with Html, CSS and vanilla JS.**
 
 
 Users are hence able to set particular time intervals chosen by their care in which we they'll  have a pomodoro, a short break and a long break.
