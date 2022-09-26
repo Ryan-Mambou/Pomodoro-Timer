@@ -134,8 +134,7 @@ body {
 
 .time-section {
 	background-color: rgba(255,255,255,0.2);
-	width: 30%;
-	min-width: 400px;
+	width: 40%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -216,7 +215,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	width: 35%;
-	min-width: 470px;
 	margin: 25px;
 }
 
@@ -228,11 +226,11 @@ body {
     border: none;
 	height: 3px;
 	background-color: white;
-	min-width: 470px;
+	width: 30%;
 }
 
 .add-task {
-	min-width: 470px;
+	width: 30%;
 	display: flex;
 	justify-content: center;
 	cursor: pointer;
@@ -265,9 +263,9 @@ body {
 
 } 
 
-@media (max-width: 767px){
+@media screen and (max-width: 768px){
 	.top {
-		width: 100%;
+		width: 95%;
 	}
 
 	#progress-container{
@@ -279,7 +277,19 @@ body {
 	}
 
 	.time-section {
-		width: 50%;
+		width: 90%;
+	}
+
+	.task {
+		width: 90%;
+	}
+
+	.hr-task {
+		width: 90%;
+	}
+
+	.add-task {
+		width: 90%;
 	}
 
 	.parameters {
