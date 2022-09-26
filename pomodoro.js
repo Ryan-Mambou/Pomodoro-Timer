@@ -400,8 +400,8 @@ if (state === 3) {
      	 	function checkIfOver(url){
      	 		const audio = new Audio(url);
 
-     	 			if (time === 0){
-     	 				audio.play();
+     	 			if (time === 0){  
+     	 				audio.play(); 
 
      	 				 //Checks the current page and defines the page to the corresponding page. That is changes from pomodoro to s-break
      	 				if (page === 1){
@@ -438,7 +438,6 @@ if (state === 3) {
     	                startStop.textContent = document.getElementById('checkbox2').checked && longbreakCount == document.getElementById('longbreak-count').value ? "STOP" : "START";
     	                startStop.style.boxShadow = "0px 7px 0px 0px rgba(220,220,220,1)";
     	                progress.style.width = 0 + '%';
-    	                clearInterval(countDown);
     	                console.log(longbreakCount == document.getElementById('longbreak-count').value);
     	                console.log(document.getElementById('longbreak-count').value);
 
@@ -459,8 +458,7 @@ if (state === 3) {
     	                countDown = setInterval(timer, 1000);
     	                }
 
-    	                
-
+                        clearInterval(countDown);
      	 				}
 
      	 				else if (page === 3) {
@@ -487,12 +485,9 @@ if (state === 3) {
 
     	                clearInterval(countDown);
      	 				}
+     	 			}
+     	 		}
 
-    	            }
-    	    }
-    	 
-
-	     	 			
      	 				
      	 	
 
