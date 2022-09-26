@@ -27,7 +27,6 @@ body {
 	padding: 10px;
 	align-items: center;
     background-color: rgb(227, 66, 52);
-    min-height: 85vh;
     color: white;
     position: relative;
     transition: background-color 1s ease;
