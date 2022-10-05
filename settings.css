@@ -10,8 +10,7 @@
 	color: 	rgb(105,105,105);
 	border-radius: 10px;
     background-color: white;
-	position: absolute;
-	
+	position: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
